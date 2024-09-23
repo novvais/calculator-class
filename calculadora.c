@@ -1,83 +1,103 @@
 #include <stdio.h>
 
 void soma() {
-    int n1, n2, r1;
+    float n1, n2, r1;
 
-    printf("Rotina de Adição");
+    printf("Rotina de Adicao \n");
 
-    printf("Digite o primeiro numero:");
-    scanf("%d", &n1);
+    printf("Digite o primeiro numero: ");
+    scanf("%f", &n1);
 
-    printf("Digite o segundo numero:");
-    scanf("%d", &n2);
+    printf("Digite o segundo numero: ");
+    scanf("%f", &n2);
 
     r1 = n1 + n2;
 
-    printf("A soma e: %d", r1);
+    printf("A soma e: %f \n", r1);
 }
 
 void subtracao() {
-    int n1, n2, r2;
+    float n1, n2, r2;
 
-    printf("Rotina de Adição");
+    printf("Rotina de Subtracao \n");
 
-    printf("Digite o primeiro numero:");
-    scanf("%d", &n1);
+    printf("Digite o primeiro numero: ");
+    scanf("%f", &n1);
 
-    printf("Digite o segundo numero:");
-    scanf("%d", &n2);
+    printf("Digite o segundo numero: ");
+    scanf("%f", &n2);
 
     r2 = n1 - n2;
 
-    printf("A subtracao e: %d", r2);
+    printf("A subtracao e: %f \n", r2);
 }
 
 void multiplicacao() {
-    int n1, n2, r3;
+    float n1, n2, r3;
 
-    printf("Rotina de Adição");
+    printf("Rotina de Multiplicacao \n");
 
-    printf("Digite o primeiro numero:");
-    scanf("%d", &n1);
+    printf("Digite o primeiro numero: ");
+    scanf("%f", &n1);
 
-    printf("Digite o segundo numero:");
-    scanf("%d", &n2);
+    printf("Digite o segundo numero: ");
+    scanf("%f", &n2);
 
     r3 = n1 * n2;
 
-    printf("A multiplicacao e: %d", r3);
+    printf("A multiplicacao e: %f \n", r3);
 }
 
 void divisao() {
-    int n1, n2, r4;
+    float n1, n2, r4;
 
-    printf("Rotina de Adição");
+    printf("Rotina de Divisao \n");
 
-    printf("Digite o primeiro numero:");
-    scanf("%d", &n1);
+    printf("Digite o primeiro numero: ");
+    scanf("%f", &n1);
 
-    printf("Digite o segundo numero:");
-    scanf("%d", &n2);
+    printf("Digite o segundo numero: ");
+    scanf("%f", &n2);
 
     if(n1 == 0 || n2 == 0) {
         printf("O valor digitado nao pode ser dividido!");
     } else {
         r4 = n1 / n2;
 
-        printf("A divisao e: %d", r4);
+        printf("A divisao e: %f \n", r4);
     }
 }
 
+int opcao;
+
 int main() {
-    
+    do {
+        printf("[1] - Adicao \n");
+        printf("[2] - Subtracao \n");
+        printf("[3] - Multiplicacao \n");
+        printf("[4] - Divisao \n");
+        printf("[5] - Sair \n");
 
-    switch ()
-    {
-    case 1:
+        printf("Escolha uma opcao: ");
+        scanf("%d", &opcao);
 
+        switch (opcao) {
+            case 1:
+                soma();
+            break;
+            case 2:
+                subtracao();
+            break;
+            case 3:
+                multiplicacao();
+            break;
+            case 4:
+                divisao();
+            break;
+            default:
+                printf("Opcao invalida - Tente novamente.");
         break;
-    case 2:
-    default:
-        break;
-    }
+        }
+    } while (opcao != 5);
+
 }
